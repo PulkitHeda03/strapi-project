@@ -16,7 +16,7 @@
     },
     "title": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "category": {
       "type": "relation",
@@ -26,11 +26,11 @@
     },
     "metaTitle": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "metaDescription": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "readTime": {
       "type": "integer"
@@ -39,7 +39,7 @@
       "type": "uid",
       "targetField": "title"
     },
-    "canonicalURL": {
+    "canonicalUrl": {
       "type": "string"
     },
     "content": {
@@ -49,12 +49,12 @@
         "preset": "defaultHtml"
       }
     },
-    "FAQ": {
+    "FAQs": {
       "type": "component",
       "component": "faq.faq-section",
       "repeatable": true
     },
-    "coverImage": {
+    "featuredImage": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
