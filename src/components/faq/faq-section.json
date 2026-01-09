@@ -5,10 +5,10 @@
   },
   "options": {},
   "attributes": {
-    "Question": {
+    "question": {
       "type": "string"
     },
-    "Answer": {
+    "answer": {
       "type": "customField",
       "customField": "plugin::ckeditor5.CKEditor",
       "options": {

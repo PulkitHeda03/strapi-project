@@ -13,20 +13,20 @@
   "attributes": {
     "title": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "metaTitle": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "metaDescription": {
       "type": "text",
-      "required": true
+      "required": false
     },
     "coverImage": {
       "type": "media",
       "multiple": false,
-      "required": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files"
@@ -34,15 +34,15 @@
     },
     "publishAt": {
       "type": "datetime",
-      "required": true,
+      "required": false,
       "default": "2025-12-30T05:30:28.458Z"
     },
     "slug": {
       "type": "uid",
       "targetField": "title",
-      "required": true
+      "required": false
     },
-    "metaKeyword": {
+    "metaKeywords": {
       "type": "string"
     },
     "content": {
@@ -51,16 +51,16 @@
       "options": {
         "preset": "defaultHtml"
       },
-      "required": true
+      "required": false
     },
     "FAQs": {
       "type": "component",
       "component": "faq.faq-section",
       "repeatable": true
     },
-    "canonicalURL": {
+    "canonicalUrl": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "JourneyList": {
       "type": "enumeration",
@@ -68,6 +68,9 @@
         "Offline",
         "Online"
       ]
+    },
+    "disclaimer": {
+      "type": "text"
     }
   }
 }

@@ -441,34 +441,32 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
-    canonicalURL: Schema.Attribute.String & Schema.Attribute.Required;
+    canonicalUrl: Schema.Attribute.String;
     content: Schema.Attribute.RichText &
-      Schema.Attribute.Required &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
         {
           preset: 'defaultHtml';
         }
       >;
-    coverImage: Schema.Attribute.Media<'images' | 'files'> &
-      Schema.Attribute.Required;
+    coverImage: Schema.Attribute.Media<'images' | 'files'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    disclaimer: Schema.Attribute.Text;
     FAQs: Schema.Attribute.Component<'faq.faq-section', true>;
     JourneyList: Schema.Attribute.Enumeration<['Offline', 'Online']>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'> &
       Schema.Attribute.Private;
-    metaDescription: Schema.Attribute.Text & Schema.Attribute.Required;
-    metaKeyword: Schema.Attribute.String;
-    metaTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    metaDescription: Schema.Attribute.Text;
+    metaKeywords: Schema.Attribute.String;
+    metaTitle: Schema.Attribute.String;
     publishAt: Schema.Attribute.DateTime &
-      Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'2025-12-30T05:30:28.458Z'>;
     publishedAt: Schema.Attribute.DateTime;
-    slug: Schema.Attribute.UID<'title'> & Schema.Attribute.Required;
-    title: Schema.Attribute.String & Schema.Attribute.Required;
+    slug: Schema.Attribute.UID<'title'>;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

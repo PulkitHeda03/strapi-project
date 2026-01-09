@@ -6,14 +6,14 @@ export interface FaqFaqSection extends Struct.ComponentSchema {
     displayName: 'FAQ-Section';
   };
   attributes: {
-    Answer: Schema.Attribute.RichText &
+    answer: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
         {
           preset: 'defaultHtml';
         }
       >;
-    Question: Schema.Attribute.String;
+    question: Schema.Attribute.String;
   };
 }
 
